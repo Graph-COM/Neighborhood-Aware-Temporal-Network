@@ -16,13 +16,11 @@ NUM_NEIGHBORS = args.n_degree
 NUM_EPOCH = args.n_epoch
 ATTN_NUM_HEADS = args.attn_n_head
 DROP_OUT = args.drop_out
-GPU = args.gpu
 DATA = args.data
 NUM_HOP = args.n_hop
 LEARNING_RATE = args.lr
 POS_DIM = args.pos_dim
 TOLERANCE = args.tolerance
-CPU_CORES = args.cpu_cores
 VERBOSITY = args.verbosity
 SEED = args.seed
 TIME_DIM = args.time_dim
@@ -30,7 +28,6 @@ REPLACE_PROB = args.replace_prob
 SELF_DIM = args.self_dim
 NGH_DIM = args.ngh_dim
 assert(NUM_HOP < 3) # only up to second hop is supported
-assert(CPU_CORES >= -1)
 set_random_seed(SEED)
 logger, get_checkpoint_path, get_ngh_store_path, get_self_rep_path, get_prev_raw_path, best_model_path, best_model_ngh_store_path = set_up_logger(args, sys_argv)
 

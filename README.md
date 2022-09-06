@@ -1,12 +1,12 @@
 <h1 align="center">Neighborhood-Aware-Temporal-Network (NAT)</h1>
 <p align="center">
-    <a href=""><img src="https://img.shields.io/badge/-Paper-grey?logo=gitbook&logoColor=white" alt="Paper"></a>
+    <a href="https://arxiv.org/abs/2209.01084"><img src="https://img.shields.io/badge/-Paper-grey?logo=gitbook&logoColor=white" alt="Paper"></a>
     <a href="https://github.com/Graph-COM/Neighborhood-Aware-Temporal-Network"><img src="https://img.shields.io/badge/-Github-grey?logo=github" alt="Github"></a>
     <!---<a href="https://proceedings.mlr.press/v162/miao22a.html"> <img alt="License" src="https://img.shields.io/static/v1?label=Pub&message=ICML%2722&color=blue"> </a>---!>
 </p>
 
 This repository contains the official implementation of NAT as described in the paper: [Neighborhood-aware Scalable Temporal Network
-Representation Learning]() by Yuhong Luo, and Pan Li.
+Representation Learning](https://arxiv.org/abs/2209.01084) by Yuhong Luo, and Pan Li.
 
 ## Introduction
 In a temporal network, the joint neighborhood of a set of nodes often provides crucial structural information on predicting whether they may interact at a certain time. However, all previous works either fail to capture such information or depend on extremely time-consuming feature construction approaches.  Most temporal networks learn a vector representation for each node, and predict whether two node may interact (aka. a link) based on a combination (e.g. the inner product) of the two vector representations. However, they fail the simple example in Fig. 1 Left because they learn the same representation for nodes in different parts of the graph. Some recent works provide theoretically powerful solutions by constructing joint neighborhood structural features. However, their methods are computationally expensive and do not scale to large temporal networks.

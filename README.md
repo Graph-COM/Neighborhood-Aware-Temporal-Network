@@ -6,7 +6,7 @@
 </p>
 
 This repository contains the official implementation of NAT as described in the paper: [Neighborhood-aware Scalable Temporal Network
-Representation Learning](https://arxiv.org/abs/2209.01084) by Yuhong Luo, and Pan Li.
+Representation Learning](https://arxiv.org/abs/2209.01084)(LoG 2022) by Yuhong Luo, and Pan Li.
 
 ## Introduction
 In a temporal network, the joint neighborhood of a set of nodes often provides crucial structural information on predicting whether they may interact at a certain time. However, all previous works either fail to capture such information or depend on extremely time-consuming feature construction approaches.  Most temporal networks learn a vector representation for each node, and predict whether two node may interact (aka. a link) based on a combination (e.g. the inner product) of the two vector representations. However, they fail the simple example in Fig. 1 Left because they learn the same representation for nodes in different parts of the graph. Some recent works provide theoretically powerful solutions by constructing joint neighborhood structural features. However, their methods are computationally expensive and do not scale to large temporal networks.
@@ -149,4 +149,12 @@ All node index starts from `1`. The zero index is reserved for `null` during pad
 Our implementation adapts the code [here](https://github.com/snap-stanford/CAW) as the code base and extensively adapts it to our purpose. We also adapts an efficient implementation of GAT [here](https://github.com/gordicaleksa/pytorch-GAT)  for the output attention layer. We thank the authors for sharing their code.
 ## Reference
 
-If you find our paper and repo useful, please cite our paper.
+If you find our paper and repo useful, please cite our paper:
+```bibtex
+@article{luo2022neighborhood,
+  title       = {Neighborhood-aware Scalable Temporal Network Representation Learning},
+  author      = {Luo, Yuhong and Li, Pan},
+  journal     = {Learning on Graphs Conference},
+  year        = {2022}
+}
+```

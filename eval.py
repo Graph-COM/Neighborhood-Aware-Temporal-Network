@@ -17,7 +17,7 @@ def eval_one_epoch(hint, tgan, sampler, src, tgt, ts, label, e_id, bs=32):
     b_min = 0
     for k in range(b_min, b_max):
       s_idx = k * TEST_BATCH_SIZE
-      e_idx = min(num_test_instance - 1, s_idx + TEST_BATCH_SIZE)
+      e_idx = min(num_test_instance, s_idx + TEST_BATCH_SIZE)
       if s_idx == e_idx:
         continue
       batch_idx = np.arange(s_idx, e_idx)

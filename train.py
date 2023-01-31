@@ -43,7 +43,7 @@ def train_val(train_val_data, model, mode, bs, epochs, criterion, optimizer, ear
     for k in tqdm(range(num_batch)):
       # generate training mini-batch
       s_idx = k * bs
-      e_idx = min(num_instance - 1, s_idx + bs)
+      e_idx = min(num_instance, s_idx + bs)
       
       if s_idx == e_idx:
         continue

@@ -41,7 +41,6 @@ n_feat = np.load('./processed/ml_{}_node.npy'.format(DATA))
 
 
 e_idx_l = g_df.idx.values.astype(int)
-e_idx_l = np.zeros_like(e_idx_l)
 label_l = g_df.label.values
 ts_l = g_df.ts.values
 
